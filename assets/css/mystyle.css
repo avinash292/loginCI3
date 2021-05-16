@@ -1,0 +1,16 @@
+body {
+	background-color: #e6ffe6;
+  }
+
+  span a {
+	color: red;
+  }
+
+  a:hover {
+	text-decoration: none;
+  }
+
+	.error{
+		color:red;
+	}
+
