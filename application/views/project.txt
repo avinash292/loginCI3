@@ -1,0 +1,9 @@
+This is login and registration project.
+In this project Admin and user module.
+Admin and user can register and login itself.
+Admin have all access for all operation of user.
+User can register and login and add his property
+User can add, delete and modify his peoperty.
+User can see only his property but admin can see all user and its property.
+User can delete record by one by one or selected.
+Admin credential email=> admin@gmail.com  pass=> 123
