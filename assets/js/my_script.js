@@ -44,8 +44,7 @@ function mark_All(obj)
 			if(confirm("Are You Sure To Delete ?"))
             {   
                 return true;
-            }
-			else{
+            }else{
 				return false;
 			}
 

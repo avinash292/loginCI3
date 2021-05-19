@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 06:40 AM
+-- Generation Time: May 19, 2021 at 10:34 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -67,14 +67,9 @@ CREATE TABLE `property` (
 --
 
 INSERT INTO `property` (`id`, `p_id`, `p_name`, `p_address`, `p_pincode`, `a_name`, `area`, `facilities`, `p_ref`, `p_photo`, `u_id`) VALUES
-(1, 'hbjhajhbka', 'ljhb', 'jhbkj', '666666', 'yg', 'jygk', 'ljyg', 'kuyg', 'bd7771169697dd1b4c1f2fe76b5ff28c.jpg', 1),
-(2, 'hgfjf', 'hgv', ',hjg', '545454', ',jhg', 'khgf', ',jhg', ',jhg', '7905307678f8153d36b3453602929744.jpg', 2),
-(3, 'kjhbb', 'khvjh', 'hgjvh', '676767', 'jkhgv', 'kjgv', 'kjgv', 'kjhv', 'c817bcd79a5e2e0dc4abc62c2898a074.jpg', 1),
-(4, ',hvhb', 'lkjhbjlb', 'ljhbkj', '787878', 'jhv', 'kjgv', 'kghv', 'kjhv', '4b182d71674ad70f3980640d62ba7d8e.jpg', 2),
-(5, ',jblkbh', 'lkblj', 'lkbkj', '767676', 'ukgliguy', 'jyk', 'kuyg', 'kjv', 'bda4eb63dad5d45e5743c3e007b5bf25.jpg', 3),
-(6, ',nvkhgv', 'ljhvkjvh', 'jhvkjgv', '878787', 'lhjbkjh', 'ljhvkjvh', 'ljhkjh', 'ljhvkjv', 'fbdc1c076d3230d60d08c54843178cb5.png', 3),
-(7, 'h,jbh', 'hjb,jh', 'ljkhbbjh', '767676', ',jhvm', ',jhkj', 'jhkvj', 'kjvk', '8b8a54909feeb4a58381c719f68e590d.jpg', 2),
-(8, 'ghjsf', 'gfgndfh', 'chjmdfh', '444444', 'vghmdgdh', 'fhjdyh', 'xfgnjf', 'fgjsyf', '0553b6f53ca94ccd45b125d603686c14.jpg', 1);
+(1, '2345', 'avinash property', 'kanpur', '212121', 'broker', '45ft', 'swiming', '8888888888', '2329a39f954aab141fa962044edbe3d3.jpeg', 1),
+(2, '3456', 'kaushik', 'lucknow', '656543', 'broker', '90ft', 'DRIVING', '87886434', '162c5d2176c721c137ec9bfe06cdc22b.jpg', 1),
+(3, '2345', 'aman property', 'kanpur', '878787', 'broker amam', '34ft', 'playing', '8787878787', '8fb50276db9031615b955c2d2c3aac73.jpeg', 2);
 
 -- --------------------------------------------------------
 
@@ -100,9 +95,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `address`, `gender`, `city`, `state`, `country`, `pincode`) VALUES
-(1, 'avinash', '123', 'avi@gmail.com', 'allahabad', 'male', 'allahabad', 'Uttar Pradesh', 'India', '545454'),
-(2, 'vikas', '123', 'vikas@gmail.com', 'ahh', 'male', 'allahabad', 'Uttar Pradesh', 'India', '212121'),
-(3, 'aman', '123', 'aman@gmail.com', 'allahabad', 'male', 'allahabad', 'Uttar Pradesh', 'India', '656565');
+(1, 'avinash', '123', 'avinash@gmail.com', 'allahabad', 'male', 'allahabad', 'Uttar Pradesh', 'India', '878787'),
+(2, 'Aman', '123', 'aman@gmail.com', 'allahabad', 'male', 'allahabad', 'Uttar Pradesh', 'India', '878787');
 
 --
 -- Indexes for dumped tables
@@ -140,13 +134,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `property`
 --
 ALTER TABLE `property`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

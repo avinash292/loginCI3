@@ -90,9 +90,9 @@
                                         echo($total_property);
                                         ?></span><span>&nbspProperty
                                         Info</span></button>
-                                <a href="<?php echo base_url('user/delete_user')?>/<?php echo $user['id'];?>"
-                                    class="btn btn-sm btn-danger" style="font-size:15px;"
-                                    onclick="del_user();">Delete</a>
+                                <a onClick="javascript: return confirm('Please confirm deletion');"
+                                    href="<?php echo base_url('user/delete_user')?>/<?php echo $user['id'];?>"
+                                    class="btn btn-sm btn-danger" style="font-size:15px;">Delete</a>
                             </form>
 
                         </td>

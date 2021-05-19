@@ -9,11 +9,13 @@
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
-                    <?php if ($this->session->userdata('session_data')['user_type'] == 'admin') {?>
+                    <?php
+                    if ($this->session->userdata('session_data') !=null) {
+                        if ($this->session->userdata('session_data')['user_type'] == 'admin') {?>
                     <a href="<?php echo base_url('user/dashboard');?>" class=" btn btn-outline-primary mt-1">All
                         user</a>
-                    <?php } ?>
-
+                    <?php }
+                    }?>
                     <a href="<?php echo base_url()?>" class="float-right btn btn-outline-primary mt-1">Log in</a>
                     <h4 class="card-title mt-2">Sign up</h4>
                 </header>
