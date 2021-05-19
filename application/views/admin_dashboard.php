@@ -91,7 +91,8 @@
                                         ?></span><span>&nbspProperty
                                         Info</span></button>
                                 <a href="<?php echo base_url('user/delete_user')?>/<?php echo $user['id'];?>"
-                                    class="btn btn-sm btn-danger" style="font-size:15px;">Delete</a>
+                                    class="btn btn-sm btn-danger" style="font-size:15px;"
+                                    onclick="del_user();">Delete</a>
                             </form>
 
                         </td>

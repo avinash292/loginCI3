@@ -39,3 +39,14 @@ function mark_All(obj)
             }
 
         }
+
+		function del_user(){
+			if(confirm("Are You Sure To Delete ?"))
+            {   
+                return true;
+            }
+			else{
+				return false;
+			}
+
+		}

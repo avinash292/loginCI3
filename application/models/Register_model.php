@@ -40,4 +40,14 @@ class Register_model extends CI_Model
             return false;
         }
     }
+
+    public function del_user($u_id)
+    {
+        $this->db->where('id', $u_id);
+        if ($this->db->delete('user')) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

@@ -88,11 +88,13 @@ class Login extends CI_Controller
     public function logout()
     {
         $newdata= $this->session->userdata()['session_data'];
-
+        echo"<pre>";
+        print_r($this->session->userdata());
+        die;
         $this->session->unset_userdata('session_data', $newdata);
-        // echo"<pre>";
-        // print_r($this->session->userdata());
-        // die;
+        echo"<pre>";
+        print_r($this->session->userdata());
+        die;
         $this->session->set_tempdata('success', 'Logout Seccessfully! Thanks for comming', 2);
         //$this->session->sess_destroy();
         redirect(base_url('login'));
