@@ -45,43 +45,39 @@ class Login extends CI_Controller
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
         if ($this->form_validation->run() == false) {
             $this->index();
-        } elseif ($this->input->post('email') == 'admin@gmail.com') {
-            $data =array($this->input->post());
-            $result =$this->am->check_admin($data);
-            $user_type = $result['user_type'];
-            if ($result) {
-                $this->session->set_userdata('login_userdata', $result);
-                $login_userdata =$this->session->userdata('login_userdata');
-                // echo"<pre>";
-                // print_r($login_userdata);
-                // die;
-                $session_data = array('is_login' => 1, 'email' => $login_userdata['email'],'username' => $login_userdata['username'], 'user_type'=> $user_type,'u_id' => $login_userdata['id']);
-                
-                $this->session->set_userdata('session_data', $session_data);
-                redirect(base_url('user'));
-            } else {
-                $this->session->set_tempdata('error', 'Something went wrong. Try again.', 2);
-                redirect(base_url('login'));
-            }
         } else {
             $data =array($this->input->post());
-            $result =$this->rm->checkLogin($data);
-            if ($result) {
-                $user_type = 'user';
+            $result =$this->am->check_admin($data);
+            if ($result['user_type'] =='admin') {
                 $this->session->set_userdata('login_userdata', $result);
                 $login_userdata =$this->session->userdata('login_userdata');
-                // echo"<pre>";
-                // print_r($login_userdata);
-                // die;
-                $session_data = array('is_login' => 1, 'email' => $login_userdata['email'],'username' => $login_userdata['username'], 'user_type'=> $user_type,'u_id' => $login_userdata['id']);
-                // echo"<pre>";
-                // print_r($session_data);
-                // die;
+                $session_data = array('is_login' => 1, 'email' => $login_userdata['email'],'username' => $login_userdata['username'], 'user_type'=> $login_userdata['user_type'],'u_id' => $login_userdata['id']);
                 $this->session->set_userdata('session_data', $session_data);
                 redirect(base_url('user'));
+            // } else {
+                //     $this->session->set_tempdata('error', 'Something went wrong. Try again.', 2);
+                //     redirect(base_url('login'));
+                // }
             } else {
-                $this->session->set_tempdata('error', 'Something went wrong. Try again.', 2);
-                redirect(base_url('login'));
+                $data =array($this->input->post());
+                $result =$this->rm->checkLogin($data);
+                if ($result) {
+                    $user_type = 'user';
+                    $this->session->set_userdata('login_userdata', $result);
+                    $login_userdata =$this->session->userdata('login_userdata');
+                    // echo"<pre>";
+                    // print_r($login_userdata);
+                    // die;
+                    $session_data = array('is_login' => 1, 'email' => $login_userdata['email'],'username' => $login_userdata['username'], 'user_type'=> $user_type,'u_id' => $login_userdata['id']);
+                    // echo"<pre>";
+                    // print_r($session_data);
+                    // die;
+                    $this->session->set_userdata('session_data', $session_data);
+                    redirect(base_url('user'));
+                } else {
+                    $this->session->set_tempdata('error', 'Something went wrong. Try again.', 2);
+                    redirect(base_url('login'));
+                }
             }
         }
     }
